@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Productos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/8d4bb02843.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css"> 
+    
+</head>
+
+<body>
+    <!-- Barra lateral -->
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Menú Principal</h2>
+            <ul>
+                <li><a href = "#"><i class="fa-solid fa-user"></i>Usuarios</a></li>
+                <li><a href = "#"><i class="fa-brands fa-product-hunt"></i>Productos</a></li>
+                <li><a href = "#"><i class="fa-solid fa-right-to-bracket"></i>Cerrar Sesión</a></li>
+            </ul> 
+       </div>
+       <!-- Final de la barra lateral -->
+
+       <!-- Encabezado -->
+        <div class="main_content">
+            <header class="dash-header">
+                <!-- Barra de Búsqueda -->
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">                            
+                            <input type="search" class="form-control me-2"  placeholder="Buscar producto..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            
+                                <button class="btn btn-search" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>                        
+                        </form>
+                    </div>
+                </nav>
+                <!-- Final de la Barra de Búsqueda -->
+
+                <!-- Nav Item - Rol del usuario -->
+                <div class = "role">
+                    <a href = "#"><i class="fa-regular fa-user"></i><span>ADMIN</span></a>
+                </div>
+            </header>  
+            <!-- Final del encabezado -->
+            
+            
+            <!--Inicio de la tabla-->
+            <div class="container container-fluid table-container">
+                <table class="table table-bordered table-hover">
+                    <caption class = "caption-top h5 mt-5 text-center">LISTA DE PRODUCTOS</caption>
+                    <thead>
+                    <tr class = "header-table">
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Medida</th>
+                        <th>Acciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="student: ${students}">
+                        <td th:text="${student.firstName}"></td>
+                        <td th:text="${student.lastName}"></td>
+                        <td th:text="${student.email}"></td>
+                        <td>
+                        <th:block th:each="course,iter: ${student.courses}">
+                            <label th:text="${course.name}">
+                            <th:block th:if="${!iter.last}">, </th:block>
+                        </th:block>
+                        </td>
+                        <td>
+                        <a
+                            th:href="@{/students/edit/{id}(id=${student.id})}"
+                            class="btn btn-success">
+                            Editar
+                        </a>
+                        
+                        <a
+                            th:href="@{/students/{id}(id=${student.id})}"
+                            class="btn btn-danger">
+                            Eliminar
+                        </a>
+                        
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--Fin de la tabla-->
+
+

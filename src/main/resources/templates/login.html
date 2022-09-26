@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/8d4bb02843.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css"> 
+
+</head>
+<body class = "body-login">
+    <div class = "big-container-login">
+
+        <main class = "login-main">
+            <div class = "login-titulo">
+                <h2>INICIAR SESIÓN</h2>
+            </div>
+            <div class = "login-big-container">
+                
+                <div class = "login-container">
+                    <div class = "campo1-login">
+                        <!-- <i class="fa-solid fa-user"></i> -->
+                        <input type="text" name = "usuario" placeholder = "Usuario" class = "input-general">
+                    </div>
+                 
+                    <div class = "campo2-login">
+                        <!-- <i class="fa-sharp fa-solid fa-lock"></i> -->
+                        <input type="password" name = "contraseña" placeholder = "Contraseña" class = "input-general">
+                    </div>
+                </div>
+                <button type="submit" class="btn-login btn-enviar-login">ENVIAR</button>
+
+                <div class = "recordar-pass"> 
+                    <input type = "checkbox" name = "remember" class = "check-rec">
+                    <h4>Recordar mi contraseña</h4>
+                </div>
+
+                <button type="submit" class="btn-login btn-crear-cuenta">CREAR CUENTA NUEVA</button>
+                <div class = "fgt-pass">
+                    <a href = "#">¿Olvidó su contraseña?</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,482 @@
+/* Estilos de register_products.html 
+Generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #f3f5f9;
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+/* Barra lateral */
+.wrapper .sidebar {
+    width: 200px;
+    height: 100%;
+    background: #303E53;
+    padding: 30px 0px;
+    position: fixed;
+}
+
+.wrapper .sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.wrapper .sidebar ul li a {
+    color: #bdb8d7;
+    text-decoration: none;
+    display: block;
+}
+
+.wrapper .sidebar ul li a .fas {
+    width: 25px;
+}
+
+.wrapper .sidebar ul li:hover {
+    background-color: #394352;
+}
+
+.wrapper .sidebar ul li:hover a {
+    color: #fff;
+}
+i {
+    margin: 0 10px 0 -10px;
+}
+
+/* Estilos del main */
+.wrapper .main_content {
+    width: 100%;
+    margin-left: 200px;
+}
+/* Header */
+.wrapper .main_content .dash-header {
+    padding: 20px;
+    background: #fff;
+    color: #717171;
+    border-bottom: 1px solid #e0e4e8;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Barra search */
+
+.btn-search {
+    width: 4rem;
+    height: 2.8rem;
+    border: #F15C22 2px solid;
+    position: relative;    
+}
+ .btn-search:hover {
+    background-color: #f7cebe !important;
+ }
+.btn-search i {
+    color: #F15C22;
+    position: absolute;
+    right: 9px;
+}
+
+/* User Info */
+.role  {
+    margin: 2% 3% 0 0;
+    
+}
+.role i {
+    color: #F15C22;
+}
+.role a {
+    text-decoration: none;
+    color: #303E53;
+}
+
+/* Area central donde va el formulario de registrar productos*/
+
+.reg-container {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #717171;
+}
+
+.info {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome {
+    font-size: 1.5rem;
+    color: #F15C22;
+    padding-top: 1rem;
+}
+
+.wrapper .main_content .info div {
+    margin-bottom: 20px;
+
+}
+
+.info h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #303E53;
+    background-color: #f7cebe;
+    width: 70%;
+    height: 60px;
+    border-radius: 4px 4px 0 0;
+    padding: 1.5% 0 10px 2%;
+    margin-bottom: 0;
+    margin-top: 2%;
+    
+}
+
+.formulario {
+    width: 70%;
+    height: 11rem;
+    border-radius: 0 0 4px 4px;
+    padding: 20px;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    width: 120%;
+    margin-top: 2%;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.input-general {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    
+}
+.nombre-producto {
+    width: 35%;
+    margin: 0.2rem 2rem 0 2%;
+}
+
+.cantidad-producto {
+    width: 35%;
+    margin: 0.2rem 2rem 0;
+}
+
+.medida {
+    width: 15%;
+    margin: 0.5rem 2rem 0;
+    color: #8F8787;
+}
+
+.btn-guardar, .btn-limpiar, .btn-index{
+    width: 18%;
+    color: white;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-guardar, .btn-index {
+    background-color: #F15C22;
+    margin: -0.3rem 0.9rem 1rem 0;
+    
+}
+
+.btn-guardar:hover {
+    background-color: #fa8151;
+}
+
+.btn-limpiar {
+    background-color: #2FD484;
+    margin: -0.3rem 0 1rem 1.2rem;
+}
+
+.btn-limpiar:hover {
+    background-color: #22a566;
+    
+}
+
+/* Tabla de Productos */
+.table-container {
+    width: 66.5%;
+    height: auto;
+}
+
+.header-table {
+    background-color: #f7cebe;
+    border-radius: 4px 4px 0 0;
+
+}
+.h5 {
+    font-weight: 600;
+    color: #303E53;
+}
+
+/* =============== Estilos del login =============== */
+
+.body-login, .body-index {
+    background-color: #E1E1E2;
+}
+
+.big-container-index {
+    background-color: white;
+    width: 90%;
+    height: 42rem;
+    margin: auto;
+    /*centrar la página*/
+    margin-top: 20px;
+}
+
+.login-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.login-titulo {
+    margin-top: 8%;
+}
+
+.login-big-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    width: 24rem;
+    height: 27rem;
+    background-color: #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 20px 60px #a9a9a9, 0 -20px 60px #e5e5e5;
+}
+
+.login-titulo  {
+    background-color: #f7cebe;
+    width: 24rem;
+    height: 60px;
+    background-color: #f7cebe;
+    padding-top: 2%;
+    border-radius: 5px 5px 0 0;
+}
+
+.login-titulo h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #303E53;
+    text-align: center;    
+    margin-bottom: 0;
+    position: relative;        
+}
+
+.campo1-login input{
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    width: 17rem;
+}
+
+.campo2-login input{
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    width: 17rem;
+}
+
+
+.campo2-login {
+    margin-bottom: 0.8rem;    
+}
+
+
+.recordar-pass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.recordar-pass h4 {
+    color: #22a566;
+    font-size: 1rem;
+}
+
+.check-rec {
+    position: relative;
+    bottom: 4px; 
+    margin-right: 6px;
+    background-color: #0E7E49;
+} 
+
+.btn-login {
+    width: 17rem;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;    
+}
+
+.btn-enviar-login {
+    background-color: #F15C22;
+}
+
+.btn-enviar-login:hover {
+    background-color: #fa8151;
+}
+
+.btn-crear-cuenta {
+    background-color: #2FD484;
+    margin-top: 2rem;
+}
+
+.btn-crear-cuenta:hover {
+    background-color: #22a566;
+}
+
+.fgt-pass a {
+    color: #22a566;
+    text-decoration: none;
+}
+
+.fgt-pass a:hover {
+    font-size: 1.05rem;
+    text-decoration: underline;
+}
+
+/* =============== Estilos del Index =============== */
+
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.75) 0%, rgba(92, 77, 66, 0.75) 100%), url("../img/cereals.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.masthead h1,
+header.masthead .h1 {
+    font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+
+    header.masthead p {
+        font-size: 1.15rem;
+    }
+
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.px-lg-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.gx-4 {
+    --bs-gutter-x: 1.5rem;
+}
+
+.g-lg-5,
+.gx-lg-5 {
+    --bs-gutter-x: 3rem;
+}
+
+.col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.divider {
+    width: 60%;
+    border-top: 0.3rem solid #2FD484;
+    position: relative;
+    left: 20%;
+    
+}
+.btn-index {
+    position: relative;
+    left: 1rem;
+    text-decoration: none;
+    color: #fff !important;
+    
+}
+.btn-index:hover {
+    background-color: transparent;
+        border: solid 2px #F15C22;
+}
+
+.btn-eliminar {
+    width: 12%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #F15C22;
+}
+
+
+
+
+
+
+
